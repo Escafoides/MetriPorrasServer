@@ -28,6 +28,7 @@
       "required": true
     }
   },
+  "scope":{"include":"apuestas"},
   "validations": [],
   "relations": {
     "apuestas": {
