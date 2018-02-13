@@ -1,0 +1,42 @@
+{
+  "name": "Porra",
+  "plural": "porras",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "local": {
+      "type": "string",
+      "required": true
+    },
+    "visitante": {
+      "type": "string",
+      "required": true
+    },
+    "fecha": {
+      "type": "date",
+      "required": true
+    },
+    "importe": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "apuestas": {
+      "type": "hasMany",
+      "model": "Apuesta",
+      "foreignKey": "porraId",
+      "primaryKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Apuesta",
+  "plural": "apuestas",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "participante": {
+      "type": "string",
+      "required": true
+    },
+    "local": {
+      "type": "number",
+      "required": true
+    },
+    "visitante": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "porra": {
+      "type": "belongsTo",
+      "model": "Porra",
+      "foreignKey": "",
+      "primaryKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
